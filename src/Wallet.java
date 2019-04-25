@@ -7,12 +7,21 @@ public class Wallet {
         this.Balance = Balance;
     }
 
+
+    public int addMoney(int amount)
+    {
+        Balance = Balance + amount;
+        return Balance;
+
+    }
+
+    public int removeMoney(int amount)
+    {
+        Balance = Balance - amount;
+        return Balance;
+    }
     public void checkBalance()
     {
-//        if (Balance == 0)
-//        {
-//            System.out.println("Balance is Zero. Please add money");
-//        }
         if (Balance <200)
         {
             System.out.println("Balance is less. Please add money");
@@ -20,16 +29,8 @@ public class Wallet {
         System.out.println("The current balance is " +Balance);
 
     }
-
-    public void addMoney(int amount)
+    public int initialBalance()
     {
-        Balance = Balance + amount;
-        System.out.println("Amount of " +amount+ " is added");
-    }
-
-    public void removeMoney(int amount)
-    {
-        Balance = Balance - amount;
-        System.out.println("Amount of " +amount+ " is removed");
+        return Balance;
     }
 }

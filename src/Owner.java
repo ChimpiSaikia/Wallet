@@ -1,23 +1,28 @@
 public class Owner {
 
-    private int money=1000;
+    int money;
     Wallet wallet;
 
-    public Owner(){
-         wallet = new Wallet(money);
-    }
+    public Owner(Wallet wallet) {
+        this.wallet= wallet;
+   }
 
-
-    public void addMoney() {
-        wallet.addMoney(500);
-
-    }
-    public void removeMoney(){
-        wallet.removeMoney(300);
+    public void addMoney(int amount) {
+        money = wallet.addMoney(amount);
+        System.out.println("Balance after amount" + amount+ " is added: " +money);
 
     }
+    public void removeMoney(int amount) {
+        money = wallet.removeMoney(amount);
+        System.out.println("Balance after amount " + amount + " is removed: " + money);
+    }
+
     public void checkBalance(){
         wallet.checkBalance();
 
+    }
+    public void initialBalance(){
+        money = wallet.initialBalance();
+        System.out.println("Initial Balance: " + money);
     }
 }
