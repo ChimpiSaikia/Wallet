@@ -9,7 +9,7 @@ public class Owner {
 
     public void addMoney(int amount) {
         money = wallet.addMoney(amount);
-        System.out.println("Balance after amount" + amount+ " is added: " +money);
+        System.out.println("Balance after amount " + amount+ " is added: " +money);
 
     }
     public void removeMoney(int amount) {
@@ -17,8 +17,8 @@ public class Owner {
         System.out.println("Balance after amount " + amount + " is removed: " + money);
     }
 
-    public void checkBalance(){
-        wallet.checkBalance();
+    public int checkBalance(){
+        return wallet.checkBalance();
 
     }
     public void initialBalance(){
